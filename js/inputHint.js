@@ -1,11 +1,11 @@
 $(function() {
   
-  const label = $('#label-text');
-  const labelText = label.text();
+  const labelText = $('#label-text');
+  const labelValue = labelText.text();
   const inputText = $('.input_text');
 
-  label.hide();
-  inputText.val(labelText);
+  labelText.hide();
+  inputText.val(labelValue);
   
   inputText.focus(function(){  
     inputText.val('');
@@ -14,7 +14,7 @@ $(function() {
 
   inputText.blur(function(){
     if(inputText.val() === ''){
-      inputText.val(labelText);
+      inputText.val(labelValue);
       inputText.addClass('hint')
     }
   })
